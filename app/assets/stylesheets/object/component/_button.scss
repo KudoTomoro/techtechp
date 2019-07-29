@@ -1,0 +1,63 @@
+.c-line__button {
+    width: 240px;
+    height: 56px;
+    border: 1px solid #FF4400;
+    text-align: center;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    
+    &__text {
+        padding: 16px 0;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 2;
+        letter-spacing: 0.8px;
+        color: #FF4400;
+        &:hover {
+            color: #FF4400;
+        }
+    }
+
+    &:hover {
+        background-color: #FF4400;
+        & a {
+            color: #FFF;
+        }
+    }
+
+    &_white {
+        border-color: #FFF;
+        &__text {
+            color: #FFF;
+        }
+        &:hover {
+            background: #FF4400;
+            border: none;
+        }
+    }
+
+    &_blank {
+        & a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:after {
+                content: "";
+                display: block;
+                width: 16px;
+                height: 16px;
+                margin: 0 0 0 10px;
+                background: url(ic_blank_link.png) no-repeat 0 0;
+                background-size: 16px 16px;
+            }
+            &:hover {
+                &:after {
+                    background: url(ic_blank_link_white.png) no-repeat 0 0;
+                    background-size: 16px 16px;
+                }
+            }
+        }
+    }
+
+}

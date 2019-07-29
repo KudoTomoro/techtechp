@@ -1,0 +1,66 @@
+%header.l-header{ role: 'banner' }
+  .l-header__body
+    %div.l-header__logo
+      = link_to image_tag('logo.png', alt: 'techtecコーポレート'), '/'
+
+    %div.l-header__logo-sp
+      = link_to image_tag('logo.png', alt: 'techtecコーポレート'), '/'
+
+    .l-header__nav-toggle
+      = image_tag 'ic_toggle.png'
+
+    %ul.l-header__list
+      %li.l-header__link
+        = link_to "HOME", '/', class: "l-header__content"
+      %li.l-header__link
+        = link_to "SERVICE", service_path, class: "l-header__content"
+      %li.l-header__link
+        = link_to "PRODUCT", products_path, class: "l-header__content"
+      %li.l-header__link
+        = link_to "COMPANY", company_path, class: "l-header__content"
+      %li.l-header__link
+        = link_to "NEWS", "https://hi-blockchain.world/category/pol-news", class: "l-header__content l-header__content_blank", target: [:_blank]
+      %li.l-header__link
+        = link_to "COMMUNITY", "https://techtec.connpass.com/", class: "l-header__content l-header__content_blank", target: [:_blank]
+      %li.l-header__link
+        = link_to "CONTACT", contact_path, class: "l-header__content"
+      %li.l-header__link.l-header__btn
+        = link_to "RECRUIT", recruit_path, class: "l-top-header__content"
+
+.l-header__nav-sp
+  %nav
+    %ul
+      %li.l-header__link
+        = link_to "HOME", '/', class: "l-header__content"
+      %li.l-header__link
+        = link_to "SERVICE", service_path, class: "l-header__content"
+      %li.l-header__link
+        = link_to "PRODUCT", products_path, class: "l-header__content"
+      %li.l-header__link
+        = link_to "COMPANY", company_path, class: "l-header__content"
+      %li.l-header__link
+        = link_to "NEWS", "https://hi-blockchain.world/category/pol-news", class: "l-header__content l-header__content_blank", target: [:_blank]
+      %li.l-header__link
+        = link_to "COMMUNITY", "https://techtec.connpass.com/", class: "l-header__content l-header__content_blank", target: [:_blank]
+      %li.l-header__link
+        = link_to "RECRUIT", recruit_path, class: "l-header__content"
+      %li.l-header__link
+        = link_to "CONTACT", contact_path, class: "l-header__content"
+
+%script{:crossorigin => "anonymous", :integrity => "sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=", :src => "https://code.jquery.com/jquery-3.1.1.min.js"}
+:javascript
+  $(function() {
+    $('.l-header__nav-toggle').click(function(){
+      if ($(this).hasClass('open')) {
+        $('.l-header__nav-sp').fadeOut();
+        $('body').removeClass('fixed');
+        $(this).find('img').attr('src','/assets/ic_toggle.png');
+        $(this).removeClass('open');
+      } else {
+        $('.l-header__nav-sp').fadeIn();
+        $('body').addClass('fixed');
+        $(this).find('img').attr('src','/assets/ic_close.png');
+        $(this).addClass('open');
+      }
+    })
+  })

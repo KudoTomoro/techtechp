@@ -1,0 +1,206 @@
+@media screen and (min-width: 769px){
+    .navvar-wrap{
+        display: none;
+    }
+    .l-header {
+        z-index: 10;
+        width: 100%;
+        height: 96px;
+        padding: 24px 32px;
+        background: #FFF;
+
+        &__nav-sp {
+            display: none;
+        }
+
+        &__nav-toggle {
+            display: none;
+        }
+
+        &__logo {
+            & img {
+                width: auto;
+                height: 32px;
+            }
+            &-sp {
+                display: none
+            }
+        }
+
+        &__body {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            ul {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+            li {
+                display: block;
+                margin: 0 12px;
+            }
+        }
+
+        &__btn {
+            width: 120px;
+            height: 48px;
+            text-align: center;
+            background-color: #FF4400;
+            & a {
+                padding: 13px 0;
+                color: #FFF;
+                &:hover {
+                    color: #FFF;
+                }
+            }
+        }
+      
+        &__content {
+            color: #000;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0.8px;
+            &:hover {
+                color: #000;
+            }
+            &_blank {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                &:after {
+                    content: "";
+                    display: block;
+                    margin: 0 0 2px 4px;
+                    width: 12px;
+                    height: 12px;
+                    background: url(ic_head_blank.png) no-repeat 0 0;
+                    background-size: 12px 12px;
+                }
+            }
+        }
+        &__mobile{
+            display: none;
+        }
+    }
+
+    .l-top-header {
+        position: absolute;
+        z-index: 10;
+        background: none;
+        &__content {
+            color: #FFF;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0.8px;
+            &:hover {
+                color: #FFF;
+            }
+            &_blank {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                &:after {
+                    content: "";
+                    display: block;
+                    margin: 0 0 2px 4px;
+                    width: 12px;
+                    height: 12px;
+                    background: url(ic_head_blank_white.png) no-repeat 0 0;
+                    background-size: 12px 12px;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .l-header {
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        height: 64px;
+        padding: 16px;
+        background-color: #FFF;
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,0.08);
+
+        &__nav-sp {
+            display: none;
+            position: fixed;
+            top: 64px;
+            width: 100vw;
+            height: calc(100vh - 64px);
+            background-color: #FFF;
+            z-index: 10;
+
+            & ul {
+                padding: 8px 48px;
+            }
+
+        }
+
+        &__link {
+            margin: 24px 0 0;
+        }
+
+        &__content {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 1.6px;
+            color: #000;
+            &_blank {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                &:after {
+                    content: "";
+                    display: block;
+                    margin: 0 0 2px 4px;
+                    width: 12px;
+                    height: 12px;
+                    background: url(ic_head_blank.png) no-repeat 0 0;
+                    background-size: 12px 12px;
+                }
+            }
+        }
+
+        &__list {
+            display: none;
+        }
+
+        &__body {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__logo {
+            display: none;
+            &-sp {
+                display: block;
+                & img {
+                    width: auto;
+                    height: 32px;
+                }
+            }
+        }
+
+        &__nav-toggle {
+            width: 32px;
+            height: 32px;
+            padding: 8px;
+            background-color: #FFF;
+            border-radius: 50%;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.16);
+            & img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+        
+
+    }
+}
+
+

@@ -1,0 +1,73 @@
+
+
+!!!
+%html
+  = stylesheet_link_tag 'application', media: 'all'
+  = javascript_include_tag 'application'
+  %head
+    %title CONTACT - 株式会社techtec
+    %meta{ name: 'description', content: '株式会社techtecに関するお問い合わせや採用、その他パートナーシップや取材に関するご相談は、随時お気軽にお寄せください。'}
+    %meta{ content: 'text/html; charset=UTF-8', http: { equiv: 'Content-Type' } }
+    %meta{ content: 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes', name: 'viewport' }
+    = favicon_link_tag 'favicon', rel: 'icon', href: '/assets/favicon.ico'
+  %body
+  = render 'header'
+  .c-body
+    .c-contact
+      %section
+        .c-body__title.c-contact__title
+          %h2.c-body__heading CONTACT
+          %span.c-body__subhead 一緒にできること
+        %p.c-contact__text 株式会社techtecに関するお問い合わせや採用、</br>その他パートナーシップや取材に関するご相談は以下よりお願いいたします。
+        .c-contact__form
+          %form{action: '/inquiry', method: 'post'}
+            .c-contact__item
+              %p.c-contact__label
+                会社名
+                %span.c-contact__must *
+              .c-contact__input
+                %input{name: 'company', id:'company'}
+            .c-contact__item
+              %p.c-contact__label
+                氏名
+                %span.c-contact__must *
+              .c-contact__input
+                %input{name: 'name', id:'name'}
+            .c-contact__item
+              %p.c-contact__label
+                電話番号
+                %span.c-contact__must *
+              .c-contact__input
+                %input{name: 'tel', id:'tel'}
+            .c-contact__item
+              %p.c-contact__label
+                メールアドレス
+                %span.c-contact__must *
+              .c-contact__input
+                %input{name: 'mail', id:'mail', class:'long'}
+            .c-contact__item
+              %p.c-contact__label
+                メールアドレス確認
+                %span.c-contact__must *
+              .c-contact__input
+                %input{name: 'confirmation_mail', id:'confirmation_mail', class:'long'}
+            .c-contact__item
+              %p.c-contact__label
+                件名
+                %span.c-contact__must *
+              .c-contact__input
+                %input{name: 'subject', id:'subject', class:'long'}
+            .c-contact__item
+              %p.c-contact__label
+                本文
+                %span.c-contact__must *
+              .c-contact__input
+                %textarea{rows: 6, name: 'message', id:'message', class:'long'}
+            .c-contant__button
+              .c-contact__button__robot
+                =recaptcha_tags callback: 'recaptcha'
+              .c-contact__button__submit
+                %input{value: '送信', class: 'c-form__submit', id: 'confirmation_button', type: 'button', onclick: 'confirm_inquiry_mail();', disabled: true}
+                %input{type: 'submit', id:'submit', style:'display: none'}
+
+  = render 'footer'

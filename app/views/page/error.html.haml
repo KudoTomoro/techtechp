@@ -1,0 +1,18 @@
+!!!
+%html
+  = stylesheet_link_tag 'application', media: 'all'
+  %head
+    %meta{ content: 'text/html; charset=UTF-8', http: { equiv: 'Content-Type' } }
+    %meta{ content: 'width=device-width,initial-scale=1', name: 'viewport' }
+    = favicon_link_tag 'favicon', rel: 'icon', href: '/assets/favicon.ico'
+  %body
+  = render 'header'
+  .c-body
+    .e-body
+      %section.inner
+        %h2.e-body__title Is this Orphanblock...?
+        %p.e-body__desc 該当するページが存在しません
+        .e-body__image
+          = image_tag 'img_error.png'
+          
+  = render 'footer'

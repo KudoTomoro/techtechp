@@ -1,0 +1,137 @@
+@media screen and (min-width: 769px){
+
+    .i-service {
+        &__content {
+            padding: 120px 80px 160px;
+            background: #FAFAFA;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+
+            &__cell {
+                width: calc((100% - 64px) / 3);
+                padding: 64px 48px;
+                background-color: #FFF;
+                box-shadow: 0 4px 48px 0 rgba(0,0,0,0.08);
+                text-align: center;
+            }
+            
+            &__image {
+                width: 180px;
+                height: 180px;
+                margin: auto;
+                padding: 40px;
+                border-radius: 50%;
+                border: 1px solid #ECF0F4;
+                & img {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+
+            &__title {
+                margin: 32px 0 16px;
+                font-size: 20px;
+                font-weight: 700;
+                letter-spacing: 1.6px;
+                color: #000;
+            }
+
+            &__explain {
+                font-size: 14px;
+                letter-spacing: 0.8px;
+                line-height: 2;
+                color: #333;
+            }
+
+            &__item {
+                width: 100%;
+                height: auto;
+                min-height: 132px;
+                margin: 24px 0 0;
+                padding: 16px;
+                background-color: #FAFAFA;
+                text-align: left;
+                font-size: 12px;
+                line-height: 1.6;
+                color: #333;
+            }
+
+            &__button {
+                margin: 32px auto 0;
+            }
+
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .i-service {
+        padding: 0 0 64px;
+        &__content {
+            padding: 48px 24px;
+            background: #FAFAFA;
+
+            &__cell {
+                width: 100%;
+                height: auto;
+                margin: 32px 0 0;
+                padding: 32px 24px;
+                background-color: #FFF;
+                box-shadow: 0 4px 48px 0 rgba(0,0,0,0.08);
+                text-align: center;
+                &:first-child {
+                    margin: 0;
+                }
+            }
+            
+            &__image {
+                width: 136px;
+                height: 136px;
+                margin: auto;
+                padding: 28px;
+                border-radius: 50%;
+                border: 1px solid #ECF0F4;
+                & img {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+
+            &__title {
+                margin: 24px 0 16px;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 1.6px;
+                color: #000;
+            }
+
+            &__explain {
+                font-size: 12px;
+                letter-spacing: 0.8px;
+                color: #333;
+            }
+
+            &__item {
+                width: 100%;
+                height: auto;
+                margin: 16px 0 0;
+                padding: 16px;
+                background-color: #FAFAFA;
+                text-align: left;
+                font-size: 12px;
+                line-height: 1.6;
+                color: #333;
+            }
+
+            &__button {
+                width: 100%;
+                margin: 16px auto 0;
+            }
+        }
+    }
+
+}
+
+

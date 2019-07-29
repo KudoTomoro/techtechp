@@ -1,0 +1,52 @@
+%footer
+  %section.inner
+    .l-footer__body
+      .l-footer__body__logo
+        = image_tag 'logo_wh.png', alt: 'techtec'
+      .l-footer__body__link
+        %ul
+          %li.l-footer__title
+            ABOUT
+          %li.l-footer__link
+            =link_to "ホーム", '/', class: "l-footer__content"
+          %li.l-footer__link
+            =link_to "サービス一覧", service_path, class: "l-footer__content"
+          %li.l-footer__link
+            =link_to "プロダクト一覧", products_path, class: "l-footer__content"
+          %li.l-footer__link
+            =link_to "会社情報", company_path, class: "l-footer__content"
+          %li.l-footer__link
+            =link_to "採用情報", recruit_path, class: "l-footer__content"
+          %li.l-footer__link
+            =link_to "お問い合わせ", contact_path, class: "l-footer__content"
+        %ul
+          %li.l-footer__title
+            SERVICE
+          %li.l-footer__link
+            =link_to "メディアサポート事業", '/service/media_consulting', class: "l-footer__content"
+          %li.l-footer__link
+            =link_to "人材育成事業", '/service/human_resource_development', class: "l-footer__content"
+          %li.l-footer__link
+            =link_to "翻訳・採用事業", '/service/translation', class: "l-footer__content"
+        %ul
+          %li.l-footer__title
+            PRODUCT
+          %li.l-footer__link
+            =link_to "PoL(ポル)", "https://pol.techtec.world", class: "l-footer__content", target: [:_blank]
+          %li.l-footer__link
+            =link_to "techtec", "https://techtec.site", class: "l-footer__content", target: [:_blank]
+          %li.l-footer__link
+            =link_to "Hi Blockchain", "https://hi-blockchain.world/", class: "l-footer__content", target: [:_blank]
+        %ul
+          %li.l-footer__title
+            COMMUNITY
+          %li.l-footer__link
+            =link_to "Twitter", "https://twitter.com/PoL_techtec", class: "l-footer__content", target: [:_blank]
+          %li.l-footer__link
+            =link_to "Facebook", "https://www.facebook.com/PoLtechtec/", class: "l-footer__content", target: [:_blank]
+          %li.l-footer__link
+            =link_to "connpass", "https://techtec.connpass.com/", class: "l-footer__content", target: [:_blank]
+          %li.l-footer__link
+            =link_to "会社ブログ", "https://medium.com/techtec", class: "l-footer__content", target: [:_blank]
+    .l-footer__copyright
+      %p ​©︎2019 • techtec Inc.

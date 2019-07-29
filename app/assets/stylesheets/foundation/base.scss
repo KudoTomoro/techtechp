@@ -1,0 +1,36 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+body {
+    position: relative;
+    font-family: 'Gotham','Noto Sans Japanese','Avenir next','ヒラギノ角ゴ Pro W3','Arial','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+
+    &.fixed {
+        overflow: hidden;
+    }
+}
+
+.filter {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.64);
+}
+
+@media screen and (min-width: 1021px){
+    .inner {
+        margin: 0 80px;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1020px) and (min-width: 768px) {
+
+}
+
+@media screen and (max-width: 767px) {
+    
+}
